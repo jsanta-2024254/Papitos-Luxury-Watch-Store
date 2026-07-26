@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papitos Luxury Watch Store</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.jpg" alt="Papitos Luxury Watch Store" />
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="nav">
+                <ul class="menu">
+                    ...
+                    <ul class="menu">
+                        <li class="menu-item"><a href="index.html">Inicio</a></li>
+                        <li class="menu-item marcas">
+                            <a href="#">Marcas </a>
+                            <ul class="submenu">
+                                <li><a href="../Index/index-patek.html" style="color:#c9a14a;">Rolex</a></li>
+                                <li><a href="../index-audemar.html">Audemars Piguet</a></li>
+                                <li><a href="../index-patek.html">Patek Philippe</a></li>
+                                <li><a href="../index-omega.html">Omega</a></li>
+                                <li><a href="../index-richard.html">Richard Mille</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="index-hombre.html">Hombre</a></li>
+                        <li class="menu-item"><a href="index-mujer.html">Mujer</a></li>
+                        <li class="menu-item logout-item">
+                            <button id="logoutBtn"
+                                style="background:none; border:none; color:#c9a14a; cursor:pointer; font-size:1rem; padding:0; font-family:inherit;">
+                                Cerrar sesión
+                            </button>
+                        </li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Aquí va el banner carrusel -->
+    <div class="banner-carrusel">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked>
+            <input type="radio" name="radio-btn" id="img-2">
+            <input type="radio" name="radio-btn" id="img-3">
+            <div class="slide slide1">
+                <img src="../images/banner1.jpg" alt="Banner 1">
+            </div>
+            <div class="slide slide2">
+                <img src="../images/banner2.jpg" alt="Banner 2">
+            </div>
+            <div class="slide slide3">
+                <img src="../images/banner3.jpg" alt="Banner 3">
+            </div>
+            <div class="navigation-manual">
+                <label for="img-1" class="manual-btn"></label>
+                <label for="img-2" class="manual-btn"></label>
+                <label for="img-3" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <section class="banner-presentacion">
+        <h1>Bienvenido a Papitos Luxury Watch Store</h1>
+        <p>La mejor selección de relojes y accesorios para todos los gustos.</p>
+    </section>
+
+
+
+    <!-- Sección sobre la marca propia -->
+    <section class="marca-propia">
+        <h2>Papitos Signature</h2>
+        <p>
+            Descubre nuestra exclusiva línea <strong>Papitos Signature</strong>, donde la tradición relojera se une con
+            la innovación y el diseño de lujo. Cada pieza es ensamblada con precisión y pasión, garantizando calidad y
+            estilo únicos para nuestros clientes más exigentes.
+        </p>
+    </section>
+
+    <!-- Footer con contacto -->
+    <footer class="footer-contacto">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>Contacto</h2>
+                <p>Correo: papitoswatchceo@gmail.com</p>
+                <p>Teléfono: +502 55675495</p>
+                <p>Dirección: Av. Principal zona 16, Ciudad de Guatemala</p>
+                <p>Horario: Lunes a Sábado 10:00 - 19:00</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 Papitos Luxury Watch Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../Scripts/login.js"></script>
+</body>
+
+</html>

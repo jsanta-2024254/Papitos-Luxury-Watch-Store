@@ -1,0 +1,329 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #181818;
+    color: #f5f5f5;
+}
+.main-header {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 70px;
+    position: relative;
+}
+.logo img {
+    height: 44px;
+    margin-right: 40px;
+}
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: auto;
+}
+.menu-icon span {
+    height: 4px;
+    background: #c9a14a;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+    display: block;
+}
+.menu-toggle {
+    display: none;
+}
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-item > a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 1px;
+    position: relative;
+}
+.menu-item > a:hover,
+.menu-item > a:focus {
+    background: #c9a14a;
+    color: #181818;
+}
+.menu-item.marcas {
+    position: relative;
+}
+.menu-item.marcas > a::after {
+    content: "▼";
+    font-size: 0.7em;
+    margin-left: 7px;
+    color: #c9a14a;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #222;
+    min-width: 180px;
+    box-shadow: 0 8px 24px #0007;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+    z-index: 10;
+    animation: fadeIn 0.2s;
+}
+.menu-item.marcas:hover .submenu,
+.menu-item.marcas:focus-within .submenu {
+    display: block;
+}
+.submenu li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    display: block;
+    padding: 12px 28px;
+    font-size: 1em;
+    transition: background 0.2s, color 0.2s;
+}
+.submenu li a:hover {
+    background: #c9a14a;
+    color: #181818;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Sección marca propia */
+.marca-propia {
+    background: #222;
+    color: #c9a14a;
+    text-align: center;
+    padding: 50px 20px 40px 20px;
+    margin: 0;
+}
+.marca-propia h2 {
+    font-size: 2em;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+.marca-propia p {
+    font-size: 1.15em;
+    color: #f5f5f5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer contacto */
+.footer-contacto {
+    background: #111;
+    color: #fff;
+    padding: 40px 0 10px 0;
+    margin-top: 0;
+}
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+.footer-info {
+    min-width: 250px;
+}
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.95em;
+    color: #c9a14a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-header .container {
+        padding: 0 10px;
+        height: auto;
+    }
+    .nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #181818;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        box-shadow: 0 8px 24px #0007;
+        border-radius: 0 0 10px 10px;
+        z-index: 100;
+        gap: 0;
+    }
+    .menu-item {
+        width: 100%;
+        text-align: left;
+    }
+    .menu-item > a {
+        width: 100%;
+        display: block;
+        padding: 18px 24px;
+    }
+    .submenu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0 0 10px 10px;
+        min-width: 100%;
+        padding: 0;
+    }
+    .submenu li a {
+        padding: 14px 40px;
+    }
+    .menu-toggle:checked ~ .nav .menu {
+        display: flex;
+    }
+    .menu-icon {
+        display: flex;
+    }
+}
+
+/* Banner carrusel */
+.banner-carrusel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #0005;
+}
+.banner-carrusel .slides {
+    width: 100%;
+    height: 320px;
+    position: relative;
+}
+.banner-carrusel .slide {
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.banner-carrusel .slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.banner-carrusel .slide {
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.banner-carrusel .slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#img-1:checked ~ .slide1 {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+#img-2:checked ~ .slide2 {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+#img-3:checked ~ .slide3 {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-presentacion {
+    position: relative;
+    background: url('../images/Bienvenida.jpg') center center/cover no-repeat;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.banner-presentacion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 24, 24, 0.7); /* más oscuro para mejor contraste */
+    z-index: 1;
+}
+.banner-presentacion h1,
+.banner-presentacion p {
+    position: relative;
+    z-index: 10;
+}
+.banner-presentacion h1 {
+    font-size: 2.7em;
+    color: #c9a14a;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.banner-presentacion p {
+    font-size: 1.2em;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+@media (max-width: 700px) {
+    .banner-presentacion {
+        height: 180px;
+        padding: 0 10px;
+    }
+    .banner-presentacion h1 {
+        font-size: 2em;
+    }
+}
+
+
+
+.scale-up-top{animation:scale-up-top 1s; } 
+@keyframes scale-up-top{0%{transform:scale(.5);
+    transform-origin:center top}100%
+{transform:scale(1);
+    transform-origin:center top}}
